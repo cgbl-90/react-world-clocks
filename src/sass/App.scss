@@ -1,0 +1,111 @@
+// Variables
+
+$base-color: #1f13cc;
+$base-dark: rgba($base-color, 0.88);
+$font: "Roboto Condensed", sans-serif;
+
+//
+
+body {
+  font-family: $font;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100px;
+  place-items: center;
+}
+
+a,
+a:focus,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  height: 70px;
+}
+
+main {
+  min-height: 70vh;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 1px 2px 8px grey;
+  background-color: $base-color;
+  display: flex;
+  justify-content: center;
+  div {
+    color: white;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+    }
+    h1 {
+      font-size: 150px;
+      transition: ease-in-out;
+    }
+  }
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  div {
+    position: relative;
+    width: 150px;
+    padding: 10px 0px;
+    text-align: center;
+    border: 2px dotted white;
+    border-radius: 4px;
+    h6 {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+
+      &:hover,
+      &:focus {
+        color: yellow;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 10px;
+  label {
+    font-weight: bolder;
+    padding: 2px 8px;
+    background-color: transparent;
+    color: white;
+    font-family: inherit;
+  }
+  select,
+  option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 2px 8px;
+    font-weight: 600;
+  }
+}
